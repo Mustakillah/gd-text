@@ -296,7 +296,7 @@ class Box
                 $this->drawFilledRectangle(
                     new Rectangle(
                         $xMOD,
-                        $this->box->getY() + $yAlign + ($n * $lineHeightPx) + ($lineHeightPx - $backgroundHeight) + (1 - $this->lineHeight) * 13 * (1 / 50 * $this->fontSize),
+                        (int)($this->box->getY() + $yAlign + ($n * $lineHeightPx) + ($lineHeightPx - $backgroundHeight) + (1 - $this->lineHeight) * 13 * (1 / 50 * $this->fontSize)),
                         $box->getWidth(),
                         $backgroundHeight
                     ),
@@ -308,10 +308,10 @@ class Box
                 // Marks current line with color
                 $this->drawFilledRectangle(
                     new Rectangle(
-                        $xMOD,
-                        $this->box->getY() + $yAlign + ($n * $lineHeightPx),
+                        (int)$xMOD,
+                        (int)($this->box->getY() + $yAlign + ($n * $lineHeightPx)),
                         $box->getWidth(),
-                        $lineHeightPx
+                        (int)$lineHeightPx
                     ),
                     new Color(rand(1, 180), rand(1, 180), rand(1, 180))
                 );
@@ -321,8 +321,8 @@ class Box
                 if ($this->textShadow !== null) {
                     $this->drawInternal(
                         new Point(
-                            $xMOD + $this->textShadow->offset->getX(),
-                            $yMOD + $this->textShadow->offset->getY()
+                            (int)($xMOD + $this->textShadow->offset->getX()),
+                            (int)($yMOD + $this->textShadow->offset->getY())
                         ),
                         $this->textShadow->color,
                         $line,
