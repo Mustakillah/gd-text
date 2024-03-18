@@ -1,5 +1,5 @@
 {
-    "name": "pe46dro/gd-text",
+    "name": "mustakillah/gd-text",
     "description": "A class drawing multiline and aligned text on pictures. Uses GD extension.",
     "license": "MIT",
     "require": {
