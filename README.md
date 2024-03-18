@@ -4,7 +4,7 @@ gd-text
 ### Installation via Composer:
 
 ```bash
-composer require pe46dro/gd-text
+composer require mustakillah/gd-text
 ```
 
 ### Basic usage example
